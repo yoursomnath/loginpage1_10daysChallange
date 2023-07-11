@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Login Page</title>
+</head>
+<body>
+  <div class="container">
+    <div class="home-div">
+      <div class="image"></div>
+      <div class="text-div">
+        <h1>Enterprise team collaboration.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi doloribus perspiciatis iusto voluptatibus qui aliquid.</p>
+      </div>
+      <div class="btns-div">
+        <div class="btns btn1">Register</div>
+        <div class="btns btn2">Sign In</div>
+      </div>
+    </div>
+    <div class="sign-in-div">
+      <div class="back-btn1"><i class="fa-solid fa-arrow-turn-up"></i></div>
+      <div class="sign-in-text">
+        <h1>Let's sign you in.</h1>
+        <p>Welcome back. <br> You've been missed!</p>
+      </div>
+      <form action="#" class="form">
+        <div class="input-div">
+          <input type="text" placeholder="Phone, email or username" required>
+          <input type="password" name="pass" placeholder="Password" required>
+        </div>
+        <div class="submit-div">
+          <p>Don't have an account? <a href="#" class="regBtn2">Register</a></p>
+          <input type="submit" value="Sign In" class="sub-btn">
+        </div>
+      </form>
+    </div>
+    <div class="register-div">
+      <div class="back-btn2"><i class="fa-solid fa-arrow-turn-up"></i></div>
+      <div class="sign-in-text">
+        <h1>Register Here. </h1>
+        <p>Welcome<br>Thank you.</p>
+      </div>
+      <form action="#" class="form">
+        <div class="input-div">
+          <input type="text" placeholder="Phone, email or username" required>
+          <input type="password" name="pass" placeholder="Password" required>
+          <input type="text" name="cpass" placeholder="Confirm Password" required>
+        </div>
+        <div class="submit-div">
+          <p>Already have an account? <a href="#" class="sInBtn2">Sign In</a></p>
+          <input type="submit" value="Register" class="sub-btn">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+  <script type="text/javascript">
+      let regBtn = document.querySelector(".btn1");
+      let logInBtn = document.querySelector(".btn2");
+      let regBtn2 = document.querySelector(".regBtn2");
+      let logInBtn2 = document.querySelector(".sInBtn2");
+      let loginDiv = document.querySelector(".sign-in-div");
+      let regDiv = document.querySelector(".register-div");
+      let backBtn1 = document.querySelector(".back-btn1 i");
+      let backBtn2 = document.querySelector(".back-btn2 i");
+
+
+      regBtn.addEventListener("click", event =>{
+        regDiv.style.left = "0";
+      })
+      regBtn.addEventListener("mouseover", event =>{
+        regBtn.style.background = "white";
+        regBtn.style.color = "black";
+        logInBtn.style.color = "white";
+        logInBtn.style.background = "none";
+      })
+      logInBtn.addEventListener("mouseover", event =>{
+        logInBtn.style.background = "white";
+        logInBtn.style.color = "black";
+        regBtn.style.color = "white";
+        regBtn.style.background = "none";
+      })
+      logInBtn.addEventListener("click", event =>{
+        loginDiv.style.left = "0";
+      })
+      backBtn1.addEventListener("click", event =>{
+        loginDiv.style.left = "-100%";
+      })
+      backBtn2.addEventListener("click", event =>{
+        regDiv.style.left = "-100%";
+      })
+      regBtn2.addEventListener("click", event =>{
+        regDiv.style.left = "0";
+      })
+  </script>
+</html>
